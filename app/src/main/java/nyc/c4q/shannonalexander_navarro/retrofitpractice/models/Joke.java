@@ -7,7 +7,9 @@ package nyc.c4q.shannonalexander_navarro.retrofitpractice.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Joke {
+import java.io.Serializable;
+
+public class Joke implements Serializable{
 
     @SerializedName("icon_url")
     @Expose
