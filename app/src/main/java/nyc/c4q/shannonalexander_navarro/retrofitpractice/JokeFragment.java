@@ -3,6 +3,7 @@ package nyc.c4q.shannonalexander_navarro.retrofitpractice;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,6 +30,10 @@ public class JokeFragment extends Fragment {
 
         View root = inflater.inflate(R.layout.joke_fragment, container, false);
 
+        jokeRV = (RecyclerView) root.findViewById((R.id.rv));
+        jokeRV.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
+        jokeAdapter = new JokeAdapter();
+        jokeRV.setAdapter(jokeAdapter);
         return root;
     }
 
